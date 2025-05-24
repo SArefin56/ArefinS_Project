@@ -1,0 +1,25 @@
+
+In phase 2 of the project, we took a shift in our approach of problem solving from the previous one. In the first phase, I used class functions to save our data and implemented the classes to build logic to derive the desired outcome. In this part of the project, I saved my data in a database by 
+setting up a database schema, connected the tables created through primary and foreign keys, and run efficient queries to derive insights related to the game ‘Heartbound Challenge’. 
+
+I created a user table that demonstrates each character’s attributes like name, user type, gender. Super power and game transaction tables were 
+two of the important tables that were included. The super power included the special attributes of each character and transactions table demonstrated all 
+the important game transactions my user had in the fight. All of these tables were connected by primary and foreign keys for example, user_id is the 
+primary key of the users table but served as the foreign key in the other two tables created. In this way, I ensured there are no floating tables and there 
+is a relationship between each table. 
+
+Then, I run efficient queries to find out some of the information from the database for example, the borrowing history of each power 
+and consequences of them if misused. When I was able to run my queries successfully and extract invaluable insights about the game from the 
+database, I got the idea that I have a fully functional database. The indexing technique was incorporated  for a faster query processing. Any modifications of 
+data were committed, so no data is lost from the database due to any technical issues, following the data persistency principle. 
+
+A deep application of logic was also incorporated in the game’s framework. For instance, in the penalty consequence that was added, I established 
+a new protocol for the game that if a character borrows any power, and his activity level(active_rounds) equals or exceeds the maximum activity level
+(active_duration), then a user undergoes penalty. Say a power’s max active_duration is 3 rounds. Basically, each time the user applies the power in 
+his game we add 1 to the active_rounds. When his active rounds is 3 or more he will undergo consequences automatically due to the established logic. There is an
+exception to the rule, if the user turns off the power manually before reaching the max activity duration, then no penalty. 
+
+We also applied error handling technique to our database design. For example for the users table one of the error validation rule we added to prevent data
+inconsistency was no duplicate entry for the user. So whenever someone tries to enter one user twice he will get the error message. 
+
+There is also a Command Line Interface(CLI) that has been built for the users to navigate the game and better experience. 
